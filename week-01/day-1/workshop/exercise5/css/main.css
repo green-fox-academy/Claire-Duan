@@ -1,0 +1,26 @@
+h1 {
+    color: blue;
+}
+
+h2 {
+    color: orange;
+}
+
+.main-list li {
+    color: blue;
+    list-style: square;
+}
+
+.fruit-list li {
+    color: black;
+    list-style: disc;
+}
+
+.veg-list li {
+    color: black;
+    list-style: decimal;
+}
+
+#apple-box {
+    color: red;
+}

@@ -1,0 +1,31 @@
+div {
+    background-color: darkcyan;
+    height:120px;
+    width: 350px;
+    font-size: 36px;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 15px solid rgb(39, 39, 245);
+    box-sizing: content-box;
+    text-align: center;
+    line-height: 120px;
+}
+
+.north-box {
+    background-color: rgb(241, 112, 134);
+    border-bottom: 0px;
+}
+.east-box {
+    background-color: rgb(252, 252, 121);
+    border-top: 0px;
+    border-bottom: 0px;
+}
+.south-box {
+    background-color: lightblue;
+    border-top: 0px;
+    border-bottom: 0px;
+}
+.west-box {
+    background-color: #7da1db;
+    border-top: 0px;
+}

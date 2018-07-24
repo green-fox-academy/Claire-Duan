@@ -1,0 +1,14 @@
+div {
+    background-color: darkcyan;
+    height: 120px;
+    width: 270px;
+    font-size: 36px;
+    color: #000000;
+    color: black;
+    color: rgb(0, 0, 0);
+    color:rgba(0, 0, 0, .5);
+    font-family: Arial, Helvetica, sans-serif;
+    border: 5px solid lightgreen;
+    margin-bottom: 15px;
+    padding: 15px;
+}

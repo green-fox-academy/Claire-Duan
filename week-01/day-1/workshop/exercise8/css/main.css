@@ -1,0 +1,18 @@
+.container {
+    border: 2px solid blue;
+    padding: 10px;
+    width: 640px;
+    margin: 10px;
+}
+
+.container div{
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    background-color: blue;
+    margin: 5px;
+}
+
+.pink {
+    background-color: peru;
+}
