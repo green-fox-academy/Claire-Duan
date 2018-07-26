@@ -1,0 +1,31 @@
+{
+
+  "attr-lowercase": true,
+
+  "attr-value-double-quotes": true,
+
+  "attr-no-duplication": true,
+
+  "spec-char-escape": true,
+
+  "title-require": true,
+
+  "alt-require": true,
+
+  "doctype-html5": true,
+
+  "id-class-value": "dash",
+
+  "style-disabled": true,
+
+  "inline-style-disabled": true,
+
+  "inline-script-disabled": true,
+
+  "space-tab-mixed-disabled": "space",
+
+  "attr-unsafe-chars": true,
+
+  "head-script-disabled": true
+
+}

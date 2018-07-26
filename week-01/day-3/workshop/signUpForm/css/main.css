@@ -2,30 +2,58 @@ html {
     font-family: Arial;
 }
 
-form {
-    display: inline-block;
-    float: left;
+body {
+    display: flex;
+    width: 600px;
+    justify-content: space-around;
 }
 
-div {
-    display: inline-block;
+.wrapper {
+    display: flex;
+    width: 600px;
+    justify-content: space-around;
 }
 
 .orDiv {
     height: 200px;
-    vertical-align: 100px;
+    padding-top: 130px;
 }
 
 .orText {
     font-size: 30px;
-    height: 70px;
-    width: 70px;
+    height: 100px;
+    width: 100px;
+    text-align: center;
     background: lightgrey;
     border-radius: 100%;
+    padding-top: 35px;
+    box-sizing: border-box;
 }
 
 .loginButtons {
-    float: right;
+    padding-top: 70px;
+}
+
+.loginButtons a {
+    text-decoration: none;
+    margin: 20px;
+    padding: 20px;
+    font-weight: bold;
+}
+
+.loginButtons .facebook {
+    background: darkblue;
+    color: white;
+}
+
+.loginButtons .twitter {
+    background: rgb(75, 168, 245);
+    color: white;
+}
+
+.loginButtons .google {
+    background: rgb(238, 65, 65);
+    color: white;
 }
 
 h1{
@@ -55,8 +83,4 @@ input[type="submit"] {
     margin-top: 40px;
     padding: 10px 20px 10px 20px;
     background: rgb(24, 180, 172);
-}
-
-form, .orDiv, .loginButtons {
-    float:left;
 }
