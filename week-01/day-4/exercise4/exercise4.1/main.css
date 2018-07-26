@@ -1,0 +1,45 @@
+.container {
+  width: 100vh;
+  margin: 0 auto;
+}
+
+nav {
+  width: 100vh;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  background: rgb(179, 29, 179);
+}
+
+nav ul {
+  display: flex;
+  margin: 0;
+  align-items: center;
+}
+
+nav li {
+  display: block;
+  list-style-type: none;
+  text-decoration: none;
+  background: skyblue;
+  width: 100px;
+  height: 30px;
+  margin: 20px;
+}
+
+.wrapper {
+  width: 100vh;
+  height: 500px;
+  margin: 0 auto;
+  display: flex;
+}
+
+section {
+  background: rgb(241, 241, 76);
+  flex-basis: 65%;
+}
+
+aside {
+  background: rgb(66, 212, 66);
+  flex-basis: 35%;
+}

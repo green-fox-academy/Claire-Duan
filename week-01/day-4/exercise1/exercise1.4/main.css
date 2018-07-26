@@ -1,0 +1,32 @@
+body {
+  height: 100vh;
+}
+
+.container {
+  width: 300px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  min-height: 100px;
+}
+
+.green {
+  background: greenyellow;
+  flex-basis: 25%;
+  order: 1;
+}
+
+.yellow {
+  background: yellow;
+  flex-basis: 50%;
+  order: 3;
+}
+
+.purple {
+  background: purple;
+  flex-basis: 25%;
+  order: 2;
+}

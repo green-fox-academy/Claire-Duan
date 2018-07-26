@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.yellow {
+  height: 200px;
+  width: 100%;
+  background: yellow;
+}
+
+.purple {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  background: purple;
+  z-index: 1;
+}
+
