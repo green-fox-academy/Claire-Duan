@@ -1,0 +1,62 @@
+html {
+    font-family: Arial;
+}
+
+form {
+    display: inline-block;
+    float: left;
+}
+
+div {
+    display: inline-block;
+}
+
+.orDiv {
+    height: 200px;
+    vertical-align: 100px;
+}
+
+.orText {
+    font-size: 30px;
+    height: 70px;
+    width: 70px;
+    background: lightgrey;
+    border-radius: 100%;
+}
+
+.loginButtons {
+    float: right;
+}
+
+h1{
+    font-weight: normal;
+    padding-top: 30px;
+    padding-left: 20px;
+}
+
+a {
+    display: block;
+}
+
+input {
+    display: block;
+    font-size: 18px;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+    border-style: hidden;
+    border-bottom: 0.5px solid gray;
+}
+
+input[type="submit"] {
+    color: white;
+    font-weight: bold;
+    margin-top: 40px;
+    padding: 10px 20px 10px 20px;
+    background: rgb(24, 180, 172);
+}
+
+form, .orDiv, .loginButtons {
+    float:left;
+}
