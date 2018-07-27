@@ -1,0 +1,41 @@
+div {
+  height: 100vh;
+  background-color: rgb(38, 66, 112);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  color: whitesmoke;
+  font-size: 20px;
+  height: 50px;
+  width: 150px;
+  margin: 10px;
+  border: 0;
+  border-radius: 10px;
+  opacity: .9;
+}
+
+.blue {
+  background-color: rgba(56, 96, 160);
+  box-shadow: 0 3px 2px 0 rgba(24, 69, 141, .8);
+}
+
+.green {
+  background-color: rgba(56, 160, 85);
+  box-shadow: 0 3px 2px 0 rgba(56, 160, 85, .8);
+}
+
+.red {
+  background-color: rgba(188, 53, 41);
+  box-shadow: 0 3px 2px 0 rgba(188, 53, 41, .8);
+}
+
+button:hover {
+  opacity: 1;
+}
+
+button:active {
+  opacity: .8;
+}
