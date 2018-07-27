@@ -5,17 +5,26 @@
 
 .item {
   height: 300px;
-  width: 300px;
 }
 
 .green {
-  background: greenyellow;
+  background: green;
+  flex-grow: 1;
 }
 
 .yellow {
   background: yellow;
+  flex-grow: 2;
 }
 
 .purple {
-  background: plum;
+  background: purple;
+  flex-grow: 1;
+}
+
+@media screen and (max-width: 600px) {
+
+  .container {
+    flex-direction: column;
+  }
 }
