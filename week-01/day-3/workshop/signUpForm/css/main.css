@@ -1,86 +1,86 @@
 html {
-    font-family: Arial;
+  font-family: Arial;
 }
 
 body {
-    display: flex;
-    width: 600px;
-    justify-content: space-around;
+  display: flex;
+  width: 600px;
+  justify-content: space-around;
 }
 
 .wrapper {
-    display: flex;
-    width: 600px;
-    justify-content: space-around;
+  display: flex;
+  width: 600px;
+  justify-content: space-around;
 }
 
 .orDiv {
-    height: 200px;
-    padding-top: 130px;
+  height: 200px;
+  padding-top: 130px;
 }
 
 .orText {
-    font-size: 30px;
-    height: 100px;
-    width: 100px;
-    text-align: center;
-    background: lightgrey;
-    border-radius: 100%;
-    padding-top: 35px;
-    box-sizing: border-box;
+  font-size: 30px;
+  height: 100px;
+  width: 100px;
+  text-align: center;
+  background: lightgrey;
+  border-radius: 100%;
+  padding-top: 35px;
+  box-sizing: border-box;
 }
 
 .loginButtons {
-    padding-top: 70px;
+  padding-top: 70px;
 }
 
 .loginButtons a {
-    text-decoration: none;
-    margin: 20px;
-    padding: 20px;
-    font-weight: bold;
+  text-decoration: none;
+  margin: 20px;
+  padding: 20px;
+  font-weight: bold;
 }
 
 .loginButtons .facebook {
-    background: darkblue;
-    color: white;
+  background: darkblue;
+  color: white;
 }
 
 .loginButtons .twitter {
-    background: rgb(75, 168, 245);
-    color: white;
+  background: rgb(75, 168, 245);
+  color: white;
 }
 
 .loginButtons .google {
-    background: rgb(238, 65, 65);
-    color: white;
+  background: rgb(238, 65, 65);
+  color: white;
 }
 
-h1{
-    font-weight: normal;
-    padding-top: 30px;
-    padding-left: 20px;
+h1 {
+  font-weight: normal;
+  padding-top: 30px;
+  padding-left: 20px;
 }
 
 a {
-    display: block;
+  display: block;
 }
 
 input {
-    display: block;
-    font-size: 18px;
-    margin-left: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding-bottom: 5px;
-    border-style: hidden;
-    border-bottom: 0.5px solid gray;
+  display: block;
+  font-size: 18px;
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-bottom: 5px;
+  border-style: hidden;
+  border-bottom: .5px solid gray;
 }
 
 input[type="submit"] {
-    color: white;
-    font-weight: bold;
-    margin-top: 40px;
-    padding: 10px 20px 10px 20px;
-    background: rgb(24, 180, 172);
+  color: white;
+  font-weight: bold;
+  margin-top: 40px;
+  padding: 10px 20px 10px 20px;
+  background: rgb(24, 180, 172);
 }
