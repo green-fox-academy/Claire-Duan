@@ -14,7 +14,7 @@ let i=1;
 let sum=0;
 
 for(i=0; i<5; i++) {
-  numbers[i] = Number(window.prompt("Please enter a number: ", 0));
+  numbers[i] = Number(window.prompt("Please enter a number: "));
   sum+=numbers[i];
 }
 
