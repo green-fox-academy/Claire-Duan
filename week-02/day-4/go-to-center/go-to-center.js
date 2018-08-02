@@ -6,6 +6,8 @@ const ctx = canvas.getContext('2d');
 
 const height = canvas.clientHeight;
 const width = canvas.clientWidth;
+const startPos = 10;
+const border = 40;
 
 // DO NOT TOUCH THE CODE ABOVE THIS LINE
 
@@ -22,6 +24,6 @@ function drawLine(x, y) {
   ctx.stroke();
 }
 
-for (let i = 10; i < 40; i += 10) {
+for (let i = startPos; i < border; i += startPos) {
   drawLine(i, i);
 }

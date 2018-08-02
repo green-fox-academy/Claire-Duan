@@ -1,8 +1,8 @@
 'use strict';
 
 const canvas = document.querySelector('.main-canvas');
-
 const ctx = canvas.getContext('2d');
+const loopNumber = 100;
 
 ctx.fillStyle = 'black';
 ctx.fillRect(0, 0, canvas.clientWidth, canvas.clientHeight);
@@ -14,16 +14,11 @@ function getRandomCor(axis) {
   return Math.floor((Math.random() * canvas.clientHeight));
 }
 
-function getRandomColor(){}
-
-for (let i = 0; i < 10; i++) {
+for (let i = 0; i < loopNumber; i++) {
   const x = getRandomCor('x');
   const y = getRandomCor('y');
   const transparency = Math.random();
-  console.log(transparency);
 
-  ctx.clearRect(x, y, 30, 30);
-  ctx.fillStyle = `rgba(1, 1, 1, ${transparency})`;
-  ctx.fillRect(x, y, 30, 30);
+  ctx.fillStyle = `rgba(128, 128, 128, ${transparency})`;
+  ctx.fillRect(x, y, 10, 10);
 }
-
