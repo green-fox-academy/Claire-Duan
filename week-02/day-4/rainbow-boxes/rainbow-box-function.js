@@ -4,8 +4,8 @@ const canvas = document.querySelector('.main-canvas');
 const ctx = canvas.getContext('2d');
 const midX = canvas.clientWidth / 2;
 const midY = canvas.clientHeight / 2;
-const rainbowColors = ['red', 'orange', 'yellow', 'green', 'green', 'blue', 'indigo', 'violet'];
-const gap = 20;
+const rainbowColors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+const gap = 50;
 
 // DO NOT TOUCH THE CODE ABOVE THIS LINE
 // Create a square drawing function that takes 2 parameters:
@@ -16,15 +16,15 @@ const gap = 20;
 function rainBox(size, color) {
   const x = midX - size / 2;
   const y = midY - size / 2;
-  ctx.strokeStyle = color;
-  ctx.strokeRect(x, y, size, size);
+  ctx.fillStyle = color;
+  ctx.fillRect(x, y, size, size);
 }
 
-for (let i = 1; i <= canvas.clientWidth / gap; i++) {
+for (let i = canvas.clientWidth / gap; i > 0; i--) {
   rainbowColors.forEach((color, index) => {
-    rainBox(i * 20, color);
+    rainBox(i * gap, color);
     if (index !== rainbowColors.length - 1) {
-      i++;
+      i--;
     }
   });
 }
