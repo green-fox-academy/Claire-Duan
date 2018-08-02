@@ -9,5 +9,5 @@ const width = 10;
 // DO NOT TOUCH THE CODE ABOVE THIS LINE
 // Draw a green 10x10 square to the center of the canvas.
 
-ctx.strokeStyle = 'black';
-ctx.strokeRect(midX - width / 2, midY - width / 2, width, width);
+ctx.fillStyle = 'green';
+ctx.fillRect(midX - width / 2, midY - width / 2, width, width);
