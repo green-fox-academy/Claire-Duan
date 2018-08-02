@@ -7,7 +7,7 @@ const loopNumber = 100;
 ctx.fillStyle = 'black';
 ctx.fillRect(0, 0, canvas.clientWidth, canvas.clientHeight);
 
-function getRandomCor(axis) {
+function getRandomCord(axis) {
   if (axis === 'x') {
     return Math.floor((Math.random() * canvas.clientWidth));
   }
@@ -15,8 +15,8 @@ function getRandomCor(axis) {
 }
 
 for (let i = 0; i < loopNumber; i++) {
-  const x = getRandomCor('x');
-  const y = getRandomCor('y');
+  const x = getRandomCord('x');
+  const y = getRandomCord('y');
   const transparency = Math.random();
 
   ctx.fillStyle = `rgba(128, 128, 128, ${transparency})`;
