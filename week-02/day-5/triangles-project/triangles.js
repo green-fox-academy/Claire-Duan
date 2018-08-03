@@ -34,7 +34,6 @@ function drawTriangles(startPoint, amount) {
 function triangles(startPoint) {
   for (let i = 1; i <= height / 5; i++) {
     drawTriangles(startPoint, i);
-    console.log(startPoint);
     startPoint[0] = startPoint[0] - triangleWidth / 2;
     startPoint[1] = startPoint[1] + triangleWidth;
   }

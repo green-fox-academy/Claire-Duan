@@ -4,6 +4,7 @@ module.exports = {
       'no-console': 0,
       'no-plusplus': [2, { 'allowForLoopAfterthoughts': true }],
       'no-undef': 0,
-      'strict': 0
+      'strict': 0,
+      'no-param-reassign': 0,
     },
 };
