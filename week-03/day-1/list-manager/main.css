@@ -1,0 +1,23 @@
+body {
+  display: flex;
+}
+
+li {
+  list-style-type: none;
+  padding: 0;
+  text-indent: -2em;
+  margin: 0;
+}
+
+button {
+  width: 100px;
+  margin-right: 10px;
+  align-content: center;
+}
+
+.first-container, .second-container {
+  border: 1px solid black;
+  border-spacing: 0;
+  width: 100px;
+}
+
