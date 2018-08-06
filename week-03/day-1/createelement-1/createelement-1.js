@@ -13,4 +13,6 @@ const header = document.createElement('h1');
 header.textContent = 'I can add elements to the DOM!';
 container.appendChild(header);
 
-
+const img = document.createElement('img');
+img.setAttribute('src', 'https://pbs.twimg.com/profile_images/960347893914898432/H0tA4G8k_400x400.jpg');
+container.appendChild(img);
