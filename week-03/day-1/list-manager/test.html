@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>
+            RunJS 演示代码
+        </title>
+        <script>
+            onload = function() {
+                var lis = document.getElementsByTagName("li");
+                var funny = function(i){
+                    lis[i].onclick = function(){
+                        alert("第" + (i+1) + "个");
+                    }
+                }
+                for(var i=0;i<lis.length;i++){
+                    funny(i);
+                }
+            }
+        </script>
+  </head>
+    <body>
+        <ul>
+            <li>
+                1
+            </li>
+            <li>
+                2
+            </li>
+            <li>
+                3
+            </li>
+            <li>
+                4
+            </li>
+        </ul>
+  </body>
+</html>
