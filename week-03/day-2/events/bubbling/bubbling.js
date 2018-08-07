@@ -2,9 +2,10 @@
 
 const image = document.querySelector('.img-inspector');
 const navigation = document.querySelector('nav');
-image.style.backgroundPositionX = '0';
-image.style.backgroundPositionY = '0';
-image.style.backgroundSize = '200%';
+
+image.style.backgroundPositionX = window.getComputedStyle(image).backgroundPositionX;
+image.style.backgroundPositionY = window.getComputedStyle(image).backgroundPositionY;
+image.style.backgroundSize = window.getComputedStyle(image).backgroundSize;
 
 navigation.addEventListener('click', (event) => {
   const button = event.target;
