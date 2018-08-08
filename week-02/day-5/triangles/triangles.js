@@ -46,4 +46,4 @@ function factorialTriangles(point1, point2, point3) {
   factorialTriangles(newPoints[1], newPoints[2], point3);
 }
 
-factorialTriangles([width, 0], [width / 2, height], [0 ,0]);
+factorialTriangles([width, 0], [width / 2, height], [0, 0]);
