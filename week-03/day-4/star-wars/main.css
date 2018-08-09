@@ -1,0 +1,32 @@
+label {
+  display: block;
+}
+
+input {
+  width: 200px;
+  font-size: 20px;
+}
+
+button {
+  width: 100px;
+  font-size: 20px;
+}
+
+div {
+  display: flex;
+  margin-top: 10px;
+}
+
+ul {
+  width: 300px;
+}
+
+li {
+  /* list-style-type: none; */
+  margin-bottom: 10px;
+  padding: -5em;
+}
+
+.characters li:hover {
+  background-color: lightgrey;
+}
