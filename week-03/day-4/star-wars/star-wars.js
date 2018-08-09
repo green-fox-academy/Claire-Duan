@@ -2,13 +2,14 @@ const charaList = document.querySelector('.characters');
 const filmList = document.querySelector('.films');
 const button = document.querySelector('button');
 const input = document.querySelector('input');
+let clearList = true;
 const peoplePath = 'https://swapi.co/api/people/?search=';
 
 const ajax = (method, url, callback, payload = null) => {
   const httpRequest = new XMLHttpRequest();
   httpRequest.onload = () => {
     const responseObject = JSON.parse(httpRequest.response);
-    callback(responseObject);
+    callback(responseObject, clearList);
   };
   httpRequest.open(method, url);
   httpRequest.send(JSON.stringify(payload));
@@ -20,10 +21,11 @@ const clearDomElement = (element) => {
   }
 };
 
-const peopleRenderer = (response) => {
-  clearDomElement(charaList);
-  clearDomElement(filmList);
-  console.log(response);
+const peopleRenderer = (response, clear) => {
+  if (clear) {
+    clearDomElement(charaList);
+    clearDomElement(filmList);
+  }
 
   response.results.forEach((character) => {
     const listItem = document.createElement('li');
@@ -38,6 +40,13 @@ const peopleRenderer = (response) => {
       });
     };
   });
+
+  if (response.next !== null) {
+    clearList = false;
+    ajax('GET', response.next, peopleRenderer);
+  } else {
+    clearList = true;
+  }
 };
 
 const filmRenderer = (response) => {
