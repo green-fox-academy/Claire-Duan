@@ -21,6 +21,12 @@ const clearDomElement = (element) => {
   }
 };
 
+const filmRenderer = (response) => {
+  const listItem = document.createElement('li');
+  listItem.textContent = response.title;
+  filmList.appendChild(listItem);
+};
+
 const peopleRenderer = (response, clear) => {
   if (clear) {
     clearDomElement(charaList);
@@ -29,7 +35,6 @@ const peopleRenderer = (response, clear) => {
 
   response.results.forEach((character) => {
     const listItem = document.createElement('li');
-
     listItem.textContent = character.name;
     charaList.appendChild(listItem);
 
@@ -49,11 +54,6 @@ const peopleRenderer = (response, clear) => {
   }
 };
 
-const filmRenderer = (response) => {
-  const listItem = document.createElement('li');
-  listItem.textContent = response.title;
-  filmList.appendChild(listItem);
-};
 
 button.onclick = () => {
   const query = input.value;
