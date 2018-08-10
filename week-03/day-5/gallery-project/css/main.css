@@ -1,0 +1,84 @@
+body {
+  /* background: linear-gradient(to bottom, grey, white, grey); */
+  background-color: gray;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.show-container {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.thumbnailContainer {
+  display: flex;
+}
+
+.show {
+  height: 360px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrow {
+  width: 40px;
+  background-color: silver;
+}
+
+.display {
+  width: 640px;
+}
+
+.right {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.thumbnail {
+  height: 50px;
+  width: 50px;
+  margin-left: 5px;
+  border: 5px solid white;
+  box-shadow: 0 8px 10px -3px black;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-width: 8px;
+  margin: 0 auto;
+  border-style: solid dashed dashed dashed;
+  border-color: transparent transparent white transparent;
+}
+
+.thumbnailImg {
+  height: 50px;
+  width: 50px;
+  margin: 0;
+}
+
+.hide {
+  border-bottom-color: transparent;
+}
+
+.hideDiv {
+  margin-top: 5px;
+  box-shadow: 0 5px 5px -3px black;
+}
+
+.thumbnail:hover {
+  margin-top: 0;
+  box-shadow: 0 8px 10px -3px black;
+}

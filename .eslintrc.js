@@ -10,5 +10,6 @@ module.exports = {
       'func-names': 0,
       'arrow-parens': 0,
       'no-plusplus': 0,
+      'prefer-destructuring': 0,
     },
 };

@@ -54,6 +54,7 @@ rainButton.onclick = () => {
   setSpeed(candySpeed);
 };
 
+// For testing: automatically generate 2000 candies.
 for (let i = 0; i < 2000; i++) {
   createButton.click();
 }

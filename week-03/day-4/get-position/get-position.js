@@ -25,7 +25,6 @@ const clearDomElement = (element) => {
 
 const locationGetter = (response) => {
   clearDomElement(container);
-  console.log(response);
 
   const cityLocation = response.Results[0];
   const cordinate = document.createElement('p');
