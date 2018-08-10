@@ -66,10 +66,10 @@ leftArrow.onclick = () => {
     currentIndex--;
   }
   currentImg.previousSibling.classList.add('hide');
-  currentImg.parentNode.classList.add('hideDiv');
+  currentImg.classList.add('hideDiv');
   currentImg = allImgs[currentIndex];
   currentImg.previousSibling.classList.remove('hide');
-  currentImg.parentNode.classList.remove('hideDiv');
+  currentImg.classList.remove('hideDiv');
   changeImg();
 };
 
@@ -80,8 +80,10 @@ rightArrow.onclick = () => {
     currentIndex++;
   }
   currentImg.previousSibling.classList.add('hide');
+  currentImg.classList.add('hideDiv');
   currentImg = allImgs[currentIndex];
   currentImg.previousSibling.classList.remove('hide');
+  currentImg.classList.remove('hideDiv');
   changeImg();
 };
 
@@ -91,11 +93,17 @@ thumbnailContainer.addEventListener('click', (event) => {
   if (clickedIndex >= 0) {
     currentIndex = clickedIndex;
     currentImg.previousSibling.classList.add('hide');
+    currentImg.classList.add('hideDiv');
     currentImg = allImgs[currentIndex];
     currentImg.previousSibling.classList.remove('hide');
+    currentImg.classList.remove('hideDiv');
     changeImg();
   }
 });
+
+thumbnailContainer.addEventListener('mouseover', (even) => {
+
+})
 
 createThumbnails();
 initDisplay();

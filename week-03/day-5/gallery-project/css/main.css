@@ -31,6 +31,11 @@ body {
   background-color: silver;
 }
 
+.description {
+  width: 640px;
+  background-color: rgba(0, 0, 0, 10%);
+}
+
 .display {
   width: 640px;
 }
@@ -81,4 +86,29 @@ body {
 .thumbnail:hover {
   margin-top: 0;
   box-shadow: 0 8px 10px -3px black;
+}
+
+.arrow:hover {
+  background-color: rgba(192, 192, 192, 80%);
+}
+
+.title-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title-triangle {
+  width: 0;
+  height: 0;
+  border-width: 8px;
+  margin: 0 auto;
+  border-style: solid dashed dashed dashed;
+  border-color: transparent transparent black transparent;
+}
+
+.title-div {
+  background-color: black;
+  color: white;
+  border-radius: 10%;
 }
