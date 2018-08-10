@@ -46,6 +46,8 @@ const createThumbnails = () => {
       thumbnail.parentNode.previousSibling.classList.add('hide');
       thumbnail.parentNode.classList.add('hideDiv');
     }
+    // addListener(thumbnail.parentNode.parentNode);
+    // addMouseOutListener(thumbnail.parentNode.parentNode);
   }
   allImgs = document.querySelectorAll('.thumbnail');
   currentImg = allImgs[0];
@@ -101,9 +103,35 @@ thumbnailContainer.addEventListener('click', (event) => {
   }
 });
 
-thumbnailContainer.addEventListener('mouseover', (even) => {
+const addListener = (element) => {
+  element.addEventListener('mouseover', () => {
+    console.log('mouse');
+    const titleContainer = document.createElement('div');
+    titleContainer.classList.add('title-container');
+    const titleDiv = document.createElement('div');
+    titleDiv.classList.add('title-div');
+    titleDiv.textContent = 'A Cute Cat';
+    const titleTriangle = document.createElement('div');
+    titleTriangle.classList.add('title-triangle');
+    titleContainer.style.position = 'absolute';
+    titleContainer.style.top = 0;
+    titleContainer.appendChild(titleDiv);
+    titleContainer.appendChild(titleTriangle);
+    element.insertBefore(titleContainer, element.firstChild);
+  });
+};
 
-})
+const addMouseOutListener = (element) => {
+  console.log(`children: ${element.children.length}`);
+
+  element.addEventListener('mouseout', () => {
+    if (element.children.length === 3) {
+      element.removeChild(element.firstChild);
+    }
+  });
+};
+
+// thumbnailContainer.addEventListener('mouseout'), ()
 
 createThumbnails();
 initDisplay();

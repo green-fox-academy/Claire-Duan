@@ -1,5 +1,4 @@
 body {
-  /* background: linear-gradient(to bottom, grey, white, grey); */
   background-color: gray;
   height: 100vh;
   display: flex;
@@ -9,14 +8,33 @@ body {
 }
 
 .show-container {
+  height: 360px;
   display: flex;
   margin: 0 auto;
   justify-content: center;
   align-items: center;
 }
 
+.img-container {
+  position: relative;
+}
+
+.description {
+  width: 640px;
+  background-color: rgba(0, 0, 0, 30%);
+  margin: 0;
+  z-index: 0;
+  bottom: 0;
+  position: absolute;
+}
+
+.display {
+  width: 640px;
+}
+
 .thumbnailContainer {
   display: flex;
+  justify-content: center;
 }
 
 .show {
@@ -31,15 +49,6 @@ body {
   background-color: silver;
 }
 
-.description {
-  width: 640px;
-  background-color: rgba(0, 0, 0, 10%);
-}
-
-.display {
-  width: 640px;
-}
-
 .right {
   -webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
@@ -49,6 +58,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
 }
 
 .thumbnail {
@@ -96,6 +106,14 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: absolute;
+  z-index: 0;
+}
+
+.title-div {
+  background-color: black;
+  color: white;
+  border-radius: 10%;
 }
 
 .title-triangle {
@@ -104,11 +122,5 @@ body {
   border-width: 8px;
   margin: 0 auto;
   border-style: solid dashed dashed dashed;
-  border-color: transparent transparent black transparent;
-}
-
-.title-div {
-  background-color: black;
-  color: white;
-  border-radius: 10%;
+  border-color: black transparent transparent transparent;
 }
