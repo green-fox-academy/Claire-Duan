@@ -23,12 +23,6 @@ const clearDomElement = (element) => {
   }
 };
 
-// const filmRenderer = (response) => {
-//   const listItem = document.createElement('li');
-//   listItem.textContent = response.title;
-//   filmList.appendChild(listItem);
-// };
-
 const locationGetter = (response) => {
   clearDomElement(container);
   console.log(response);
@@ -38,14 +32,7 @@ const locationGetter = (response) => {
   cordinate.textContent = `latitude: ${cityLocation.lat}  longitude: ${cityLocation.lon}`;
   container.appendChild(cordinate);
   map.src = `${mapHost}&q=${cityLocation.lat},${cityLocation.lon}`;
-  // if (response.next !== null) {
-  //   clearList = false;
-  //   ajax('GET', response.next, peopleRenderer);
-  // } else {
-  //   clearList = true;
-  // }
 };
-
 
 button.onclick = () => {
   const query = input.value;

@@ -11,3 +11,9 @@ button {
   width: 100px;
   font-size: 20px;
 }
+
+iframe {
+  width: 600px;
+  height: 450px;
+  border: 0;
+}
