@@ -40,7 +40,6 @@ const resultRenderer = (response) => {
     permaLink.href = article.web_url;
     console.log(article.web_url);
 
-
     artElement.appendChild(headLine);
     artElement.appendChild(snippet);
     artElement.appendChild(pubDate);
