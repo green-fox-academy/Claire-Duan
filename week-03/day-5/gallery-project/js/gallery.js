@@ -46,8 +46,8 @@ const createThumbnails = () => {
       thumbnail.parentNode.previousSibling.classList.add('hide');
       thumbnail.parentNode.classList.add('hideDiv');
     }
-    // addListener(thumbnail.parentNode.parentNode);
-    // addMouseOutListener(thumbnail.parentNode.parentNode);
+    addListener(thumbnail.parentNode.parentNode);
+    addMouseOutListener(thumbnail.parentNode.parentNode);
   }
   allImgs = document.querySelectorAll('.thumbnail');
   currentImg = allImgs[0];
@@ -114,7 +114,7 @@ const addListener = (element) => {
     const titleTriangle = document.createElement('div');
     titleTriangle.classList.add('title-triangle');
     titleContainer.style.position = 'absolute';
-    titleContainer.style.top = 0;
+    titleContainer.style.top = '-2em';
     titleContainer.appendChild(titleDiv);
     titleContainer.appendChild(titleTriangle);
     element.insertBefore(titleContainer, element.firstChild);
