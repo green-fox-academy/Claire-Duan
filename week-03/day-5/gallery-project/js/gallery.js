@@ -46,8 +46,8 @@ const createThumbnails = () => {
       thumbnail.parentNode.previousSibling.classList.add('hide');
       thumbnail.parentNode.classList.add('hideDiv');
     }
-    addListener(thumbnail.parentNode.parentNode);
-    addMouseOutListener(thumbnail.parentNode.parentNode);
+    addListener(thumbnail);
+    addMouseOutListener(thumbnail);
   }
   allImgs = document.querySelectorAll('.thumbnail');
   currentImg = allImgs[0];
@@ -105,7 +105,7 @@ thumbnailContainer.addEventListener('click', (event) => {
 
 const addListener = (element) => {
   element.addEventListener('mouseover', () => {
-    console.log('mouse');
+    const container = element.parentNode.parentNode;
     const titleContainer = document.createElement('div');
     titleContainer.classList.add('title-container');
     const titleDiv = document.createElement('div');
@@ -117,21 +117,18 @@ const addListener = (element) => {
     titleContainer.style.top = '-2em';
     titleContainer.appendChild(titleDiv);
     titleContainer.appendChild(titleTriangle);
-    element.insertBefore(titleContainer, element.firstChild);
+    container.insertBefore(titleContainer, container.firstChild);
   });
 };
 
 const addMouseOutListener = (element) => {
-  console.log(`children: ${element.children.length}`);
-
+  const container = element.parentNode.parentNode;
   element.addEventListener('mouseout', () => {
-    if (element.children.length === 3) {
-      element.removeChild(element.firstChild);
+    if (element.parentNode.parentNode.children.length === 3) {
+      container.removeChild(container.firstChild);
     }
   });
 };
-
-// thumbnailContainer.addEventListener('mouseout'), ()
 
 createThumbnails();
 initDisplay();
