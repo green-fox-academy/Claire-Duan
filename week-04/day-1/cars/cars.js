@@ -16,6 +16,7 @@ const volvo = {
 console.log(`First: ${volvo.ride(42)}`);
 
 
+
 // 2nd
 // Call the refuel function on the ferrari object using the bind method, with
 // 52 as a parameter
