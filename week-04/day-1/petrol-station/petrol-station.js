@@ -15,19 +15,18 @@
 
 
 const car = {
-  petrolLevel: 0,
+  petrolLevel: 20,
   petrolCapacity: 50,
   refill: function (amount) {
     this.petrolLevel += amount;
-    this.petrolCapacity -= amount;
   },
 };
 
 const station = {
   petrolStorage: 3000,
   provide: function (filledCar) {
-    filledCar.refill(20);
-    this.petrolStorage -= 20;
+    this.petrolStorage -= (filledCar.petrolCapacity - filledCar.petrolLevel);
+    filledCar.petrolLevel = filledCar.petrolCapacity;
   },
 };
 
