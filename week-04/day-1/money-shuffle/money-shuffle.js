@@ -19,9 +19,11 @@ const Cyprus = {
 const Shuffler = {
   cash: 10000,
   pick: function (person) {
-    this.cash -= 1000;
-    person.deposit(1000);
-    console.log(`${person.name} got 1000`);
+    if (this.cash > 0) {
+      this.cash -= 1000;
+      person.deposit(1000);
+      console.log(`${person.name} got 1000`);
+    }
   },
 };
 
