@@ -1,10 +1,11 @@
 'use strict';
+
 // Create an object called car
 //  - It should store its petrol level called petrolLevel
 //  - It should store its petrol capacity called petrolCapacity
 //  - It should have a refill(amount) method, that increments the petrol level,
 //    then returns how much petrol it consumed from the given amount
-//  - Initialize the petrol level to zero and the capacity to 50 
+//  - Initialize the petrol level to zero and the capacity to 50
 //
 // Create an object called station
 //  - It should store petrol amount called petrolStorage
@@ -14,21 +15,21 @@
 
 
 const car = {
-    petrolLevel: 0,
-    petrolCapacity: 50,
-    refill: function(amount) {
-        this.petrolLevel += amount;
-    },
+  petrolLevel: 0,
+  petrolCapacity: 50,
+  refill: function (amount) {
+    this.petrolLevel += amount;
+    this.petrolCapacity -= amount;
+  },
 };
 
 const station = {
-    petrolStorage: 3000,
-    provide: function(car) {
-        car.refill();
-    }
-}
-
-
+  petrolStorage: 3000,
+  provide: function (filledCar) {
+    filledCar.refill(20);
+    this.petrolStorage -= 20;
+  },
+};
 
 console.log(car.petrolLevel);
 console.log(station.petrolStorage);
