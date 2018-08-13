@@ -25,7 +25,7 @@ function Farm(slots = 10, animals = []) {
   this.animals = animals;
 
   this.breed = function () {
-    if (slots > 0) {
+    if (slots - this.animals.length > 0) {
       this.animals.push(new Animal());
     }
   };
