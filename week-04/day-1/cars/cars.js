@@ -1,4 +1,5 @@
 'use strict';
+
 // 1st
 // Call the ride method of the volvo, with 42 as a parameter
 
@@ -9,13 +10,12 @@ const volvo = {
   kms: 43000,
   ride: function (km) {
     this.kms += km;
-    this.fuel -= km * this.consumption; 
+    this.fuel -= km * this.consumption;
   },
 };
 
-console.log(`First: ${volvo.ride(42)}`);
-
-
+volvo.ride(42);
+console.log(`First: ${volvo.kms} ${volvo.fuel}`);
 
 // 2nd
 // Call the refuel function on the ferrari object using the bind method, with
@@ -28,7 +28,7 @@ const ferrari = {
   kms: 9000,
   ride: function (km) {
     this.kms += km;
-    this.fuel -= km * this.consumption; 
+    this.fuel -= km * this.consumption;
   },
 };
 
@@ -37,7 +37,8 @@ function refuel(liters) {
 }
 
 const refuelFerrari = refuel.bind(ferrari);
-console.log(`Second: ${refuelFerrari(52)}`);
+refuelFerrari(52)
+console.log(`Second: ${ferrari.kms} ${ferrari.fuel}`);
 
 
 // 3rd
@@ -47,7 +48,7 @@ console.log(`Second: ${refuelFerrari(52)}`);
 //  - kms: number
 //  - consunption: number
 // And a method called ride, that takes a parameter celled km,
-// and increments kms with it, then drains the battery based on the consumpltion 
+// and increments kms with it, then drains the battery based on the consumpltion
 
 const tesla = {
   type: 'Tesla',
@@ -56,11 +57,9 @@ const tesla = {
   consumption: 0.2,
   ride: function (km) {
     this.kms += km;
-    this.battery -= km * this.consumption; 
+    this.battery -= km * this.consumption;
   },
 };
 
-
 tesla.ride(36);
-console.log(tesla.kms);
-console.log(tesla.battery);
+console.log(`Third: ${tesla.kms} ${tesla.battery}`);
