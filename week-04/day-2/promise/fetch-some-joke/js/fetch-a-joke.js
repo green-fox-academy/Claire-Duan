@@ -18,12 +18,12 @@ const displayJokes = (joke) => {
 
 const fetchJoke = () => {
   fetch(URL)
-    .then((response) => response.json())
+    .then(response => response.json())
     .then(response => {
       displayJokes(response.value.joke);
     })
-    .catch(response => {
-      console.log(`Fetch fails: ${response}`);
+    .catch(() => {
+      console.log('Fetch fails');
     });
 };
 
