@@ -1,3 +1,9 @@
+/**
+ * @author Claire Duan
+ */
+
+'use strict';
+
 const MAX = 99999;
 const MIN = 10000;
 const MAXPIN = 9999;
