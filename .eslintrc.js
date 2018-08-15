@@ -13,5 +13,6 @@ module.exports = {
       'prefer-destructuring': 0,
       'object-shorthand': 0,
       'no-underscore-dangle': 0,
+      'consistent-return': 0,
     },
 };
