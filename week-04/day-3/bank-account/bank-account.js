@@ -51,6 +51,7 @@ function BankAccount() {
       return _pinCode;
     }
     return new Error('Pin does not match!').message;
+    // throw new Error('Pin does not match!');
   };
 
   this.deposit = (pin, amount) => {
@@ -94,7 +95,7 @@ function BankAccount() {
 const account1 = new BankAccount();
 const oldPin1 = account1.initializePin();
 console.log(`The pin now is ${oldPin1}`); // The pin is now...
-console.log(account1.regeneratePin(1111)); // Pin does not match!
+console.log(account1.regeneratePin(1111).message); // Pin does not match!
 const newPin1 = account1.regeneratePin(oldPin1);
 console.log(`The pin now is ${oldPin1}`); // The pin is now...
 console.log(account1.getBalance(1111)); // false
