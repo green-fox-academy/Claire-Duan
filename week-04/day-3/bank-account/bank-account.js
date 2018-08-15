@@ -1,7 +1,7 @@
 const MAX = 99999;
 const MIN = 10000;
 const MAXPIN = 9999;
-const MINPIN = 1000
+const MINPIN = 1000;
 
 const generateRandom = (max, min) => Math.floor(Math.random() * (max - min + 1) + min);
 
@@ -33,8 +33,8 @@ class Transaction {
 function BankAccount() {
   let _balance = 0;
   let _pinCode;
-  let _accountNumber = generateRandom(MAX, MIN);
-  let _transactions = [];
+  const _accountNumber = generateRandom(MAX, MIN);
+  const _transactions = [];
 
   this.initializePin = () => {
     if (_pinCode) {
