@@ -9,8 +9,13 @@
   "license": "ISC",
   "dependencies": {
     "es6-promise": "^4.2.4",
+<<<<<<< HEAD
     "es6-require": "^0.2.1",
     "q-io": "^1.13.6"
   },
   "description": ""
+=======
+    "q-io": "^1.13.6"
+  }
+>>>>>>> b15b6a7310eb6c1347f60ca29d33373f87f43879
 }
