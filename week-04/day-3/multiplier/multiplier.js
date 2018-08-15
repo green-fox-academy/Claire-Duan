@@ -2,11 +2,7 @@
 
 // Create the multiplier function that you can use like this:
 
-const multiplier = (num) => {
-  return (number) => {
-    return number * num;
-  };
-}
+const multiplier = (num) => (number) => number * num;
 
 const duplicator = multiplier(2);
 
