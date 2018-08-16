@@ -1,25 +1,16 @@
 'use strict';
 
-// Write the logic of the postMaster function. It shoud have two parameters: 
-//  - poBox: a string that identifies the sender
-//  - dispatchFunction: a function that will be called with the message
-//
-// The postMaster function should return a function that takes two arguments:
-//  - targetBox: a string that identifies the po_box
-//  - message: a string that contains the message
-// If the poBox matches the targetBox only that case call the dispatchFunction
-
 function postMaster(poBox, dispatchFunction) {
   const boxId = poBox;
   return (targetBox, message) => {
-    if( targetBox === boxId) {
-        dispatchFunction(message);
+    if (targetBox === boxId) {
+      dispatchFunction(message);
     }
   };
 }
 
-function myAction( message ) {
-    console.log('The message says:', message);
+function myAction(message) {
+  console.log('The message says:', message);
 }
 
 // Create a private box with a poBox identifier

@@ -7,11 +7,11 @@ class Rectangles {
   }
 
   getArea() {
-      return this.width * this.height;
+    return this.width * this.height;
   }
 
   getCircumference() {
-      return (this.width + this.height) * 2;
+    return (this.width + this.height) * 2;
   }
 }
 

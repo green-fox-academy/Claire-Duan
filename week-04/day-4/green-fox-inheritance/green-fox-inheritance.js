@@ -22,7 +22,7 @@ class Person {
   }
 }
 
-class Student extends Person{
+class Student extends Person {
   constructor(name = 'Jane Doe', age = 30, gender = 'female', previousOrganization = 'The School of Life') {
     super(name, age, gender);
     this.previousOrganization = previousOrganization;
@@ -48,12 +48,12 @@ class Student extends Person{
   }
 }
 
-class Mentor extends Person{
+class Mentor extends Person {
   constructor(name = 'Jane Doe', age = 30, gender = 'female', level = 'intermediate') {
     super(name, age, gender);
     this.level = level;
   }
- 
+
 //   constructor() {
 //     super();
 //     this.level = 'intermediate';
@@ -68,13 +68,13 @@ class Mentor extends Person{
   }
 }
 
-class Sponsor extends Person{
+class Sponsor extends Person {
   constructor(name = 'Jane Doe', age = 30, gender = 'female', company = 'Google') {
     super(name, age, gender);
     this.company = company;
     this.hiredStudents = 0;
   }
-     
+
 //   constructor() {
 //     super();
 //     this.company = 'Google';
@@ -114,6 +114,8 @@ class Cohort {
   }
 }
 
+
+// test
 const people = [];
 
 const mark = new Person('Mark', 46, 'male');
