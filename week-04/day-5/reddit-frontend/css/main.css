@@ -28,9 +28,71 @@
   background-repeat: no-repeat;
 }
 
+main {
+  display: flex;
+  margin-top: 10px;
+  position: relative;
+}
+
+aside {
+  width: 35vh;
+  position: absolute;
+  right: 0;
+}
+
+button {
+  height: 30px;
+  font-family: 'Lato', sans-serif;  
+  font-weight: 300;
+  font-size: 18px;
+  background-color: deepskyblue;
+  color: white;
+  border: 0;
+  border-radius: 10px;
+  font-weight: bold;
+  margin: 0 auto;
+  top: 30px;
+}
+
+article {
+  width: 65vh;
+  display: flex;
+  flex-direction: row;
+  color: #c6c6c6;
+  margin-bottom: 6px;
+  align-items: center;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+}
+
 .vote-container {
-  width: 30px;
-  height: 60px;
   display: flex;
   flex-direction: column;
+  margin: 0 7px;
+  text-align: center;
+}
+
+.score {
+  margin: 0 7px;
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 1px;
+}
+
+h2 a {
+  color: #0000ff;
+  font-size: medium;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+.content p {
+  color: #888;
+}
+
+p {
+  margin: 0;
+  padding:  0;
 }
