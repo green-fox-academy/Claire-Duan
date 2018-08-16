@@ -7,17 +7,11 @@ class Person {
     this.gender = gender;
   }
 
-//   constructor() {
-//     this.name = 'Jane Doe';
-//     this.age = 30;
-//     this.gender = 'female';
-//   }
-
   introduce() {
     console.log(`Hi, I'm ${this.name}, a ${this.age} year old ${this.gender}.`);
   }
 
-  getGoal() {
+  static getGoal() {
     console.log('My goal is: Live for the moment!');
   }
 }
@@ -29,13 +23,7 @@ class Student extends Person {
     this.skippedDays = 0;
   }
 
-//   constructor() {
-//     super();
-//     this.previousOrganization = 'The School of Life';
-//     this.skippedDays = 0;
-//   }
-
-  getGoal() {
+  static getGoal() {
     console.log('My goal is: Be a junior software developer.');
   }
 
@@ -54,12 +42,7 @@ class Mentor extends Person {
     this.level = level;
   }
 
-//   constructor() {
-//     super();
-//     this.level = 'intermediate';
-//   }
-
-  getGoal() {
+  static getGoal() {
     console.log('My goal is: Educate brilliant junior software developers.');
   }
 
@@ -75,13 +58,7 @@ class Sponsor extends Person {
     this.hiredStudents = 0;
   }
 
-//   constructor() {
-//     super();
-//     this.company = 'Google';
-//     this.hiredStudents = 0;
-//   }
-
-  getGoal() {
+  static getGoal() {
     console.log('My goal is: Hire brilliant junior software developers.');
   }
 

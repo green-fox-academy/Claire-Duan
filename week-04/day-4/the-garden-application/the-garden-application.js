@@ -24,13 +24,14 @@ class Garden {
   state() {
     this.plants.forEach(plant => {
       const str = (plant.checkNeedWater()) ? 'needs water' : 'doesnt need water';
-      console.log(`the ${plant.color} ${plant.constructor.name} ${str}`);
+      console.log(`the ${plant.color} ${plant.type} ${str}`);
     });
   }
 }
 
 class Plant {
-  constructor(waterLevel, absorbRatio, color) {
+  constructor(type, waterLevel, absorbRatio, color) {
+    this.type = type;
     this.waterAmount = 0;
     this.waterLevel = waterLevel;
     this.absorbRatio = absorbRatio;
@@ -48,13 +49,13 @@ class Plant {
 
 class Flower extends Plant {
   constructor(color) {
-    super(5, 0.75, color);
+    super('Flower', 5, 0.75, color);
   }
 }
 
 class Tree extends Plant {
   constructor(color) {
-    super(10, 0.4, color);
+    super('Tree', 10, 0.4, color);
   }
 }
 
@@ -73,4 +74,3 @@ garden.watering(40);
 garden.state();
 garden.watering(70);
 garden.state();
-
