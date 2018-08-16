@@ -16,7 +16,7 @@
   width: 56px;
   background: url(https://b.thumbs.redditmedia.com/Zf90LsQEOyfU9RKf5NgXRATeMlFHULaD-B6UlicR5Sc.png) center center / 100% no-repeat rgb(0, 0, 0);
   border: 2px solid rgb(255, 255, 255);
-  border-radius: 32px;
+  border-radius: 30px;
 }
 
 .title-container {
@@ -26,4 +26,11 @@
   z-index: 2;
   background-position: center center;
   background-repeat: no-repeat;
+}
+
+.vote-container {
+  width: 30px;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
 }
