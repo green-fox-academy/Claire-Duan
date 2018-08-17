@@ -112,6 +112,11 @@ p {
   width: 15px;
   height: 14px;
 }
+
+.number {
+  width: 15px;
+  text-align: center;
+}
 /*
 .up {
   src: "./images/upvote.png";

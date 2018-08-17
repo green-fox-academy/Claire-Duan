@@ -1,6 +1,6 @@
 'use strict';
 
-const URL_POST = 'http://52.57.196.190:3002/posts';
+const URL = 'http://52.29.105.35:3000/posts';
 const submit = document.querySelector('[type="submit"]');
 const form = document.querySelector('form');
 console.log(submit);
@@ -36,5 +36,5 @@ form.addEventListener('submit', () => {
   };
   title.value = '';
   urlInput.value = '';
-  ajax('POST', URL_POST, backJumping, data);
+  ajax('POST', URL, backJumping, data);
 });
