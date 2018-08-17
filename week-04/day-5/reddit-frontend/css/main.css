@@ -34,6 +34,7 @@ main {
   position: relative;
   padding: 20px 24px;
   background-color: lightgray;
+  height: 100vh;
 }
 
 .post-container {

@@ -12,8 +12,10 @@ let voteDir = '';
 const ajax = (method, url, callback, payload = null) => {
   const httpRequest = new XMLHttpRequest();
   httpRequest.onload = () => {
-    const responseObject = JSON.parse(httpRequest.response);
-    callback(responseObject);
+    if (httpRequest.status >= 200 && httpRequest.status < 400) {
+      const responseObject = JSON.parse(httpRequest.response);
+      callback(responseObject);
+    }
   };
   httpRequest.open(method, url);
   httpRequest.setRequestHeader('Accept', 'application/json');
