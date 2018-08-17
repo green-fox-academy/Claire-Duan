@@ -18,13 +18,28 @@
   border-radius: 30px;
 }
 
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .title-container {
   width: 512px;
-  height: 176px;
+  height: 100px;
   background-image: url(https://styles.redditmedia.com/t5_2qh87/styles/bannerPositionedImage_911tfwrxj3f01.png);
   z-index: 2;
   background-position: center center;
   background-repeat: no-repeat;
+}
+
+.subtitle {
+  font-variant-caps: all-petite-caps;
+  font-size: 15px;
+  letter-spacing: 10px;
+  color: lightgray;
+  font-family: "Lato", sans-serif;
 }
 
 main {
@@ -36,87 +51,29 @@ main {
   background-color: lightgray;
 }
 
-.post-container {
-  width: 65%;
-}
-
-aside {
+form {
+  width: 50%;
   box-sizing: border-box;
-  width: 30%;
-  position: absolute;
-  right: 0;
-  margin: 0 24px;
-}
-
-button {
-  box-sizing: border-box;
-  width: 100%;
-  height: 40px;
-  font-family: "Lato", sans-serif;
-  font-weight: 300;
-  font-size: 18px;
-  background-color: deepskyblue;
-  color: white;
-  border: 0;
-  font-weight: bold;
-  margin: 0 auto;
-}
-
-article {
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: row;
-  color: #c6c6c6;
-  margin-bottom: 6px;
-  align-items: center;
-  font-family: "Lato", sans-serif;
-  font-weight: 300;
   background-color: white;
-  padding: 2px 2px;
-}
-
-.vote-container {
   display: flex;
   flex-direction: column;
-  margin: 0 7px;
-  align-items: center;
-  justify-content: center;
+  padding: 10px 20px;
 }
 
-.score {
-  margin: 0 7px;
+label {
+  margin-bottom: 5px;
 }
 
-h2 {
-  margin-top: 0;
-  margin-bottom: 1px;
+input, textarea {
+  min-height: 30px;
+  margin-bottom: 20px;
+  background-color: lightgray;
 }
 
-h2 a {
-  color: #0000ff;
-  font-size: medium;
-  font-weight: normal;
-  text-decoration: none;
+textarea {
+  resize: vertical;
 }
 
-.content p {
-  color: #888;
+[type="submit"] {
+  width: 50%;
 }
-
-p {
-  margin: 0;
-  padding: 0;
-}
-
-.vote {
-  width: 15px;
-  height: 14px;
-}
-/*
-.up {
-  src: "./images/upvote.png";
-}
-
-.down {
-  src: local("./images/downvote.png");
-} */
