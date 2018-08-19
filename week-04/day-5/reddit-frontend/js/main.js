@@ -36,9 +36,11 @@ const changeVoteImg = (post) => {
   if (voteDir === 'up') {
     arrowParent.children[0].src = UPVOTED;
     arrowParent.children[1].textContent = parseInt(arrowParent.children[1].textContent, 10) + 1;
+    arrowParent.children[2].src = DOWNVOTE;
   } else {
     arrowParent.children[2].src = DOWNVOTED;
     arrowParent.children[1].textContent = parseInt(arrowParent.children[1].textContent, 10) - 1;
+    arrowParent.children[0].src = UPVOTE;
   }
 };
 
@@ -50,6 +52,19 @@ const addVoteListner = (arrow, post, direction) => {
     voteDir = direction;
     ajax('PUT', URL + fix, changeVoteImg, post);
   });
+};
+
+const addRemoveListener = (remover, id) => {
+  remover.addEventListener('click', () => {
+    console.log(URL + `/${id}`);
+    ajax('DELETE', URL + `/${id}`, deleteArticle);
+  })
+};
+
+const deleteArticle = (post) => {
+  console.log(post);
+  const article = document.querySelector(`#article-${post.id}`);
+  article.parentNode.removeChild(article);
 };
 
 const renderArrow = (direction, src, post) => {
@@ -91,13 +106,22 @@ const renderTimeAuthor = (timeStamp, author) => {
   return p;
 };
 
-const renderContent = (title, url, timeStamp, author = 'anonymous') => {
+const renderRemoveButton = (id) => {
+  const remover = document.createElement('button');
+  remover.textContent = 'Delete';
+  remover.classList.add('remove');
+  addRemoveListener(remover, id)
+  return remover;
+};
+
+const renderContent = (title, url, timeStamp, id, author = 'anonymous') => {
   const content = document.createElement('div');
   content.classList.add('content');
   const titleBox = renderTitle(title, url);
   const timeAuthor = renderTimeAuthor(timeStamp, author);
   content.appendChild(titleBox);
   content.appendChild(timeAuthor);
+  content.appendChild(renderRemoveButton(id));
   return content;
 };
 
@@ -110,7 +134,7 @@ const renderArticle = (post, index) => {
   numberBox.textContent = index;
   article.appendChild(numberBox);
   article.appendChild(renderVote(post));
-  article.appendChild(renderContent(post.title, post.url, post.timestamp));
+  article.appendChild(renderContent(post.title, post.url, post.timestamp, post.id));
   return article;
 };
 
