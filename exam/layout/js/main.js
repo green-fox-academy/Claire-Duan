@@ -4,22 +4,38 @@ const URL = 'https://mellow-sugar.glitch.me';
 const getText = document.querySelector('button');
 const form = document.querySelector('form');
 const textArea = document.querySelector('textarea');
+const stateBox = document.querySelector('p');
 
-const ajax = (method, url, callback, payload = null) => {
+const ajax = (method, url, callback = console.log, payload = null) => {
   const httpRequest = new XMLHttpRequest();
   httpRequest.onload = () => {
     if (httpRequest.status >= 200 && httpRequest.status < 400) {
-      const responseObject = JSON.parse(httpRequest.response);
-      callback(responseObject);
+      if (httpRequest.response) {
+        const responseObject = JSON.parse(httpRequest.response);
+        callback(responseObject);
+      } else {
+        callback('OK', 'limegreen');
+      }
+    } else if (Object.keys(JSON.parse(httpRequest.response)).includes('expected')) {
+      callback('Wrong', 'red');
+    } else {
+      console.log(JSON.parse(httpRequest.response));
     }
+  };
+  httpRequest.onerror = () => {
+    console.log('123');
+
+    console.log(JSON.parse(httpRequest.response));
   };
   httpRequest.open(method, url);
   httpRequest.setRequestHeader('Accept', 'application/json');
+  httpRequest.setRequestHeader('Content-type', 'application/json');
   httpRequest.send(JSON.stringify(payload));
 };
 
 const updateText = (response) => {
-  const str = response.text.replace(new RegExp('\\s+', 'g'), ' ');
+  textArea.tabIndex = response.id;
+  const str = response.text.replace(new RegExp(' +', 'g'), ' ');
   textArea.value = str;
 };
 
@@ -28,4 +44,16 @@ getText.onclick = () => {
   ajax('GET', `${URL}/text`, updateText);
 };
 
-console.log(getText);
+const setState = (state, color) => {
+  stateBox.textContent = state;
+  stateBox.style.color = color;
+};
+
+form.addEventListener('submit', () => {
+  this.event.preventDefault();
+  const requestBody = {};
+  requestBody.id = textArea.tabIndex;
+  requestBody.text = textArea.value;
+  console.log(requestBody);
+  ajax('POST', `${URL}/text`, setState, requestBody);
+});
