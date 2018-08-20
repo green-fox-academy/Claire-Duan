@@ -18,14 +18,7 @@ const ajax = (method, url, callback = console.log, payload = null) => {
       }
     } else if (Object.keys(JSON.parse(httpRequest.response)).includes('expected')) {
       callback('Wrong', 'red');
-    } else {
-      console.log(JSON.parse(httpRequest.response));
     }
-  };
-  httpRequest.onerror = () => {
-    console.log('123');
-
-    console.log(JSON.parse(httpRequest.response));
   };
   httpRequest.open(method, url);
   httpRequest.setRequestHeader('Accept', 'application/json');
@@ -41,6 +34,7 @@ const updateText = (response) => {
 
 getText.onclick = () => {
   this.event.preventDefault();
+  stateBox.textContent = '';
   ajax('GET', `${URL}/text`, updateText);
 };
 
@@ -54,6 +48,5 @@ form.addEventListener('submit', () => {
   const requestBody = {};
   requestBody.id = textArea.tabIndex;
   requestBody.text = textArea.value;
-  console.log(requestBody);
   ajax('POST', `${URL}/text`, setState, requestBody);
 });
