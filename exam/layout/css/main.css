@@ -21,7 +21,7 @@ form {
   margin-bottom: 10px;
 }
 
-input[type="submit"] {
+input, button {
   background-color: limegreen;
   border-radius: 5px;
   border: 0;
