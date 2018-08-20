@@ -54,17 +54,17 @@ const addVoteListner = (arrow, post, direction) => {
   });
 };
 
-const addRemoveListener = (remover, id) => {
-  remover.addEventListener('click', () => {
-    console.log(URL + `/${id}`);
-    ajax('DELETE', URL + `/${id}`, deleteArticle);
-  })
-};
-
 const deleteArticle = (post) => {
   console.log(post);
   const article = document.querySelector(`#article-${post.id}`);
   article.parentNode.removeChild(article);
+};
+
+const addRemoveListener = (remover, id) => {
+  remover.addEventListener('click', () => {
+    console.log(`${URL}/${id}`);
+    ajax('DELETE', `${URL}/${id}`, deleteArticle);
+  });
 };
 
 const renderArrow = (direction, src, post) => {
@@ -110,7 +110,7 @@ const renderRemoveButton = (id) => {
   const remover = document.createElement('button');
   remover.textContent = 'Delete';
   remover.classList.add('remove');
-  addRemoveListener(remover, id)
+  addRemoveListener(remover, id);
   return remover;
 };
 

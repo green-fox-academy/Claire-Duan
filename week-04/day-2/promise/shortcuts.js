@@ -14,7 +14,6 @@ promise
   .then(console.log())
   .catch(onReject);
 
-
 const promiseOn = Promise.reject(new Error('REJECTED AGAIN!!!!!!!'));
 promiseOn
   .then(console.log())

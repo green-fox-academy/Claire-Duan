@@ -5,15 +5,15 @@ const offensiveWords = ['bollocks', 'bloody', 'bugger', 'shit', 'damn', 'bastard
 
 const familyFriendlizer = (text, offensiveList) => {
   let count = 0;
-    
+
   offensiveList.forEach(word => {
     const reg = new RegExp(`\\b${word}\\b`, 'ig');
     if (text.match(reg)) {
-        count += text.match(reg).length;
-        text = text.replace(reg, '');
+      count += text.match(reg).length;
+      text = text.replace(reg, '');
     }
 });
-  text = text.replace(new RegExp('  ', 'g'), ' ')
+  text = text.replace(new RegExp('  ', 'g'), ' ');
   console.log(text);
   return count;
 };
