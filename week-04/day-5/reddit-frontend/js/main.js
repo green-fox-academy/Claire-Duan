@@ -1,6 +1,5 @@
 'use strict';
 
-
 const URL = 'http://52.29.105.35:3000/posts';
 const postContainer = document.querySelector('.post-container');
 const button = document.querySelector('button');
