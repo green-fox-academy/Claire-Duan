@@ -53,3 +53,11 @@ input:hover {
 button:hover {
   background-color: rgba(50, 205, 50, 80%);
 }
+
+.ok {
+  color: limegreen;
+}
+
+.wrong {
+  color: red;
+}

@@ -14,10 +14,10 @@ const ajax = (method, url, callback = console.log, payload = null) => {
         const responseObject = JSON.parse(httpRequest.response);
         callback(responseObject);
       } else {
-        callback('OK', 'limegreen');
+        callback('OK');
       }
     } else if (Object.keys(JSON.parse(httpRequest.response)).includes('expected')) {
-      callback('Wrong', 'red');
+      callback('WRONG');
     }
   };
   httpRequest.open(method, url);
@@ -27,26 +27,31 @@ const ajax = (method, url, callback = console.log, payload = null) => {
 };
 
 const updateText = (response) => {
-  textArea.tabIndex = response.id;
+  textArea.dataset.index = response.id;
   const str = response.text.replace(new RegExp(' +', 'g'), ' ');
   textArea.value = str;
 };
 
-getText.onclick = () => {
-  this.event.preventDefault();
-  stateBox.textContent = '';
+getText.onclick = (e) => {
+  e.preventDefault();
   ajax('GET', `${URL}/text`, updateText);
 };
 
-const setState = (state, color) => {
-  stateBox.textContent = state;
-  stateBox.style.color = color;
+const setState = (state) => {
+  if (state === 'OK') {
+    stateBox.textContent = state;
+    stateBox.className = 'ok';
+  } else if (state === 'WRONG') {
+    stateBox.textContent = state;
+    stateBox.className = 'wrong';
+  }
 };
 
-form.addEventListener('submit', () => {
-  this.event.preventDefault();
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
   const requestBody = {};
-  requestBody.id = textArea.tabIndex;
+  requestBody.id = parseInt(textArea.dataset.index, 10);
   requestBody.text = textArea.value;
+
   ajax('POST', `${URL}/text`, setState, requestBody);
 });
